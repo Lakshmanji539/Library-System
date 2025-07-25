@@ -1,0 +1,135 @@
+/* Background & Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('https://wallpapercave.com/wp/wp2036914.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Container */
+.container {
+    width: 85%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    color: #333;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #222;
+    text-align: center;
+}
+
+/* Cards */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px #ccc;
+    color: #000;
+}
+
+/* Buttons */
+button,
+.btn-primary,
+.btn-danger {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button,
+.btn-primary {
+    background-color: #007bff;
+}
+
+button:hover,
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #b52b37;
+}
+
+/* Tables */
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    color: #000;
+    background-color: #fff;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+/* Forms */
+form {
+    margin-top: 20px;
+}
+
+form input,
+form select,
+form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #000;
+}
+
+/* Alert messages */
+.alert {
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}

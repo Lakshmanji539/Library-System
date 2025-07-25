@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Issue/Return Books</h2>
+<form method="POST">
+    <label>Member</label>
+    <select name="member_id" required>
+        {% for member in members %}
+        <option value="{{ member.id }}">{{ member.name }}</option>
+        {% endfor %}
+    </select>
+
+    <label>Book</label>
+    <select name="book_id" required>
+        {% for book in books %}
+        <option value="{{ book.id }}">{{ book.title }}</option>
+        {% endfor %}
+    </select>
+
+    <label>Action</label>
+    <select name="action" required>
+        <option value="issue">Issue</option>
+        <option value="return">Return</option>
+    </select>
+
+    <label>Date</label>
+    <input type="date" name="date" required>
+
+    <button type="submit">Submit</button>
+</form>
+
+<h3>Transaction History</h3>
+<ul>
+    {% for tx in transactions %}
+    <li>{{ tx.date }} - {{ tx.member_name }} {{ tx.action }}ed {{ tx.book_title }}{% if tx.late %} (Late Fine: ₹{{ tx.late }}){% endif %}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

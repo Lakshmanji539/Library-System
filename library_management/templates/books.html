@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Books Management</h2>
+<form method="POST">
+    <input type="text" name="title" placeholder="Book Title" required>
+    <input type="text" name="author" placeholder="Author" required>
+    <input type="text" name="isbn" placeholder="ISBN" required>
+    <button type="submit">Add Book</button>
+</form>
+
+<h3>Book List</h3>
+<ul>
+    {% for book in books %}
+    <li>{{ book.title }} by {{ book.author }} (ISBN: {{ book.isbn }}) - 
+        <a href="{{ url_for('delete_book', id=book.id) }}">Delete</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

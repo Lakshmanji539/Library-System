@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Members Management</h2>
+<form method="POST">
+    <input type="text" name="name" placeholder="Member Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <button type="submit">Add Member</button>
+</form>
+
+<h3>Member List</h3>
+<ul>
+    {% for member in members %}
+    <li>{{ member.name }} ({{ member.email }}) - 
+        <a href="{{ url_for('delete_member', id=member.id) }}">Delete</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

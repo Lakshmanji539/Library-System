@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="{{ url_for('admin_dashboard') }}">Dashboard</a> |
+            <a href="{{ url_for('books') }}">Books</a> |
+            <a href="{{ url_for('members') }}">Members</a> |
+            <a href="{{ url_for('issue_return') }}">Issue/Return</a>
+        </nav>
+        <hr>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
